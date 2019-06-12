@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form {
+  display: block;
+  width: 18em;
+  textarea{
+      display: block;
+      width: 100%;
+      margin-bottom: 1em;
+  }
+}
+
+.answers {
+  display: flex;
+}
+
+.text,
+.radio {
+  display: flex;
+  flex-direction: column;
+  height: 10em;
+  justify-content: space-between;
+}
+
+.radio {
+  div {
+    input {
+      margin: 0.5em;
+    }
+  }
+}
+
+.buttons {
+  padding-top: 1em;
+  display: flex;
+  justify-content: space-between;
+}
