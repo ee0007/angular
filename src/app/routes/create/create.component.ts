@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { QuizService } from 'src/app/quiz.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+  f =new FormGroup({
+    name: new FormControl('titi',Validators.required),
+  });
+  constructor(
+    private quiz: QuizService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+  submit() {
+    console.log('submit');
+    this.quiz.createCurrent(this.f.value.name);
+    this.router.navigateByUrl("/setup");
   }
 
 }

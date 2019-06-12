@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-add-question',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddQuestionComponent implements OnInit {
 
-  constructor() { }
+  f = new FormGroup({});
+
+  constructor() {}
 
   ngOnInit() {
+
   }
+  
 
 }

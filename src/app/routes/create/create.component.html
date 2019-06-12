@@ -1,10 +1,12 @@
 <div>
   <h1>Crée ton Quizz !</h1>
-  <form>
+  <form [formGroup]="f" (ngSubmit)="submit()">
     <label>
       <div>Nom :</div>
-      <input type="text">
+      <input type="text" formControlName="name">
     </label>
-    <button routerLink="/setup">Suivant</button> 
+    <button class="primary">Suivant</button> 
   </form>
 </div>
+
+{{f.value|json}}
