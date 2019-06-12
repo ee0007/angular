@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { QuizService } from 'src/app/quiz.service';
 import { Router } from '@angular/router';
+import { Quiz } from 'src/app/quiz';
 
 @Component({
   selector: 'app-create',
