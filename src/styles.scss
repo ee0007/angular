@@ -1,13 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '../node_modules/normalize.css/normalize.css';
-html, body{
-    height: 100%;
+@import "../node_modules/normalize.css/normalize.css";
+html,
+body {
+  height: 100%;
 }
 
-button{
-    background : #eee;
-    border:none;
-    padding:0.5em;
-    margin: 1em;
+button {
+  background: #eee;
+  border: 1px solid #eee;
+  padding: 0.5em;
+  cursor: pointer;
+}
+[disabled]{
+    cursor: inherit;
+}
+
+input{
+    border: 1px solid #eee;
+    padding: 0.5em;
 }

@@ -1,9 +1,18 @@
 div {
   display: flex;
-  align-items:center; 
+  align-items: center;
   background: #eee;
   height: 3em;
   padding: 0 1em;
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    span {
+      padding-left: 0.3em;
+    }
+  }
 }
 
 img {
