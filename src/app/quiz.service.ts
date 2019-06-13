@@ -68,7 +68,9 @@ export class QuizService {
     return Object.keys(this.list).length > 0;
   }
 
-  getListAsArray() :Quiz[] {
+  getListAsArray(): Quiz[] {
     return Object.values(this.list);
   }
+
+
 }

@@ -1,3 +1,11 @@
-<p>
-  question works!
-</p>
+<div class="page">{{1}}/{{15}}</div>
+<div class="frame">
+  <span>{{quiz.current.questions[0].label}}</span>
+  <form [formGroup]="f">
+    <div *ngFor="let chr of ['A', 'B', 'C' , 'D']">
+      <input type="radio">
+      <span>{{quiz.current.questions[0]['answer'+ chr]}}</span>
+    </div>
+
+  </form>
+</div>

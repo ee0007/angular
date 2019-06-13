@@ -1,1 +1,1 @@
-<button *ngFor="let q of quiz.getListAsArray()" [routerLink]="['/',q.name,'question']">{{q.name}}</button>
+<button *ngFor="let q of quiz.getListAsArray()" (click)="startQuiz(q)">{{q.name}}</button>
