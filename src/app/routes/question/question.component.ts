@@ -31,7 +31,6 @@ export class QuestionComponent implements OnInit {
       return;
     }
     this.f.reset();
-
   }
 
 }

@@ -21,6 +21,6 @@
   </div>
   <div class="buttons">
     <button routerLink="/setup" type="button">Annuler</button>
-    <button class="primary">Ajouter</button>
+    <button class="primary" [disabled]="f.invalid">Ajouter</button>
   </div>
 </form>

@@ -2,5 +2,5 @@
 <div>
     <p>Nombre de question : {{quiz.current.questions.length}}</p>
     <button routerLink="/add-question">Ajouter une question</button>
-    <button (click)="save()">Sauver</button>
+    <button *ngIf="quiz.current.questions.length >0" (click)="save()">Sauver</button>
 </div>
