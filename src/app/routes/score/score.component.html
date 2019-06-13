@@ -1,4 +1,4 @@
-<fa-icon [icon]="faSmile" ></fa-icon>
+<fa-icon [icon]="icon" ></fa-icon>
 <span class="big">Bravo !</span>
-<span >Votre score : </span>
+<span >Ton score : {{quiz.progress.score}}/{{quiz.current.questions.length}}</span>
 <button class="primary" routerLink="/">Retour Accueil</button>
