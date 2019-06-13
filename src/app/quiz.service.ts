@@ -18,6 +18,7 @@ export class QuizService {
   constructor() {
     this.retrieveCurrent();
     this.retrieveList();
+    this.retrieveProgress();
 
   }
 
@@ -32,12 +33,21 @@ export class QuizService {
   }
 
   retrieveList() {
-    const str2 = localStorage.getItem('list');
-    if (!str2) {
+    const str = localStorage.getItem('list');
+    if (!str) {
       return;
     }
-    const list = JSON.parse(str2);
+    const list = JSON.parse(str);
     this.list = list
+  }
+
+  retrieveProgress() {
+    const str = localStorage.getItem('progress');
+    if (!str) {
+      return;
+    }
+    
+    this.progress = JSON.parse(str);
   }
 
   createCurrent(name: string) {
@@ -80,6 +90,10 @@ export class QuizService {
       questionId : 0,
       score : 0
     }
+    this.syscProhress();
   }
 
+  syscProhress(){
+    localStorage.setItem('progress', JSON.stringify(this.progress));
+  }
 }

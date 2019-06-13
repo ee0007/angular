@@ -1,7 +1,7 @@
 <div class="page">{{quiz.progress.questionId + 1}}/{{quiz.current.questions.length}}</div>
 <div class="frame">
-  <span>{{quiz.current.questions[0].label}}</span>
-  <form [formGroup]="f">
+  <span>{{quiz.current.questions[this.quiz.progress.questionId].label}}</span>
+  <form [formGroup]="f" (ngSubmit)="submit()">
     <div *ngFor="let chr of ['A', 'B', 'C' , 'D']">
       <input type="radio" formControlName="answer" [value]="chr">
       <span>{{quiz.current.questions[0]['answer'+ chr]}}</span>
