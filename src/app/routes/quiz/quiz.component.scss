@@ -1,0 +1,15 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+$width: 7em;
+
+button {
+  width: $width;
+  height: 8em;
+  margin: 1em;
+}

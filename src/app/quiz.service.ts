@@ -10,7 +10,15 @@ export class QuizService {
 
 
   current: Quiz;
+  list = {};
+
   constructor() {
+    this.retrieveCurrent();
+    this.retrieveList();
+
+  }
+
+  retrieveCurrent() {
     const str = localStorage.getItem('current');
     if (!str) {
       return;
@@ -18,7 +26,15 @@ export class QuizService {
     const q = JSON.parse(str);
     q.__proto__ = Quiz.prototype;
     this.current = q;
+  }
 
+  retrieveList() {
+    const str2 = localStorage.getItem('list');
+    if (!str2) {
+      return;
+    }
+    const list = JSON.parse(str2);
+    this.list = list
   }
 
   createCurrent(name: string) {
@@ -32,7 +48,27 @@ export class QuizService {
     this.syscCurrent();
   }
 
+
   syscCurrent() {
     localStorage.setItem('current', JSON.stringify(this.current));
+  }
+
+  saveCurrent() {
+
+    const str = localStorage.getItem('list');
+    if (str) {
+      this.list = JSON.parse(str);
+    }
+    this.list[this.current.name] = this.current;
+    localStorage.setItem('list', JSON.stringify(this.list));
+
+  }
+
+  hasQuiz() {
+    return Object.keys(this.list).length > 0;
+  }
+
+  getListAsArray() :Quiz[] {
+    return Object.values(this.list);
   }
 }

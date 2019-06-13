@@ -12,6 +12,9 @@ import { LegalComponent } from './routes/legal/legal.component';
 import { SetupComponent } from './routes/setup/setup.component';
 import { AddQuestionComponent } from './routes/add-question/add-question.component';
 import { SavedComponent } from './routes/saved/saved.component';
+import { QuizComponent } from './routes/quiz/quiz.component';
+import { QuestionComponent } from './routes/question/question.component';
+import { ScoreComponent } from './routes/score/score.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { SavedComponent } from './routes/saved/saved.component';
     LegalComponent,
     SetupComponent,
     AddQuestionComponent,
-    SavedComponent
+    SavedComponent,
+    QuizComponent,
+    QuestionComponent,
+    ScoreComponent
   ],
   imports: [
     BrowserModule,

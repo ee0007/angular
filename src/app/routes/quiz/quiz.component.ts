@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { QuizService } from 'src/app/quiz.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-quiz',
+  templateUrl: './quiz.component.html',
+  styleUrls: ['./quiz.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class QuizComponent implements OnInit {
 
   constructor(public quiz:QuizService) { }
 
