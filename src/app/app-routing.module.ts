@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'saved', component: SavedComponent },
   { path: 'setup', component: SetupComponent },
   { path: 'quiz', component: QuizComponent },
-  { path: 'question', component: QuestionComponent },
+  { path: ':quizName/question', component: QuestionComponent },
   { path: 'score', component: ScoreComponent },
 ];
 
