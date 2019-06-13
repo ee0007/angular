@@ -1,6 +1,6 @@
 export class Quiz {
     name:string;
-    question : Question[] =[];
+    questions : Question[] =[];
     constructor(){}
 }
 

@@ -24,11 +24,15 @@ export class QuizService {
   createCurrent(name: string) {
     this.current = new Quiz();
     this.current.name = name;
-    localStorage.setItem('current', JSON.stringify(this.current));
+    this.syscCurrent();
   }
 
   addQuestion(question: Question) {
-    this.current.question.push(question);
+    this.current.questions.push(question);
+    this.syscCurrent();
+  }
 
+  syscCurrent() {
+    localStorage.setItem('current', JSON.stringify(this.current));
   }
 }
