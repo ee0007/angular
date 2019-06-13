@@ -1,16 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Quiz, Question } from './quiz';
 
-
+export interface QuizProgress {
+  questionId: number;
+  score: number;
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuizService {
 
-
   current: Quiz;
   list = {};
+  progress: QuizProgress;
 
   constructor() {
     this.retrieveCurrent();
@@ -72,5 +75,11 @@ export class QuizService {
     return Object.values(this.list);
   }
 
+  initProgress() {
+    this.progress = {
+      questionId : 0,
+      score : 0
+    }
+  }
 
 }

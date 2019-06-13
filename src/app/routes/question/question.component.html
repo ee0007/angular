@@ -1,11 +1,14 @@
-<div class="page">{{1}}/{{15}}</div>
+<div class="page">{{quiz.progress.questionId + 1}}/{{quiz.current.questions.length}}</div>
 <div class="frame">
   <span>{{quiz.current.questions[0].label}}</span>
   <form [formGroup]="f">
     <div *ngFor="let chr of ['A', 'B', 'C' , 'D']">
-      <input type="radio">
+      <input type="radio" formControlName="answer" [value]="chr">
       <span>{{quiz.current.questions[0]['answer'+ chr]}}</span>
     </div>
+    <div class="buttons">
+      <button class="primary" [disabled]="f.invalid">Suivant</button>
 
+    </div>
   </form>
 </div>

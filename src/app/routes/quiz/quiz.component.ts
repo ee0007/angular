@@ -18,6 +18,7 @@ export class QuizComponent implements OnInit {
   startQuiz(q:Quiz){
     this.quiz.current=q;
     this.quiz.syscCurrent();
+    this.quiz.initProgress();
     this.router.navigate(['/',q.name,'question']);
   }
 }
