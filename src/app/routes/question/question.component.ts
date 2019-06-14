@@ -27,7 +27,7 @@ export class QuestionComponent implements OnInit {
     this.quiz.progress.questionId++;
     this.quiz.syscProhress();
     if (this.quiz.progress.questionId === this.quiz.current.questions.length) {
-      this.router.navigateByUrl("/score");
+      this.router.navigateByUrl('/score');
       return;
     }
     this.f.reset();

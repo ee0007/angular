@@ -8,7 +8,7 @@ import { QuizService } from 'src/app/quiz.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public quiz:QuizService) { }
+  constructor(public quiz: QuizService) { }
 
   ngOnInit() {
   }

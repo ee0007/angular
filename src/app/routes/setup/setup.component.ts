@@ -10,16 +10,16 @@ import { Router } from '@angular/router';
 })
 export class SetupComponent implements OnInit {
 
- 
-  constructor(private quiz :QuizService, private router:Router) {
+
+  constructor(private quiz: QuizService, private router: Router) {
   }
 
   ngOnInit() {
   }
 
-  save(){
-    console.log("about to save the quiz");
+  save() {
+    console.log('about to save the quiz');
     this.quiz.saveCurrent();
-    this.router.navigateByUrl("/saved");
+    this.router.navigateByUrl('/saved');
   }
 }

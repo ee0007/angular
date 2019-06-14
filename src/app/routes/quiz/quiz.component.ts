@@ -10,15 +10,15 @@ import { Quiz } from 'src/app/quiz';
 })
 export class QuizComponent implements OnInit {
 
-  constructor(public quiz:QuizService, private router:Router) { }
+  constructor(public quiz: QuizService, private router: Router) { }
 
   ngOnInit() {
   }
 
-  startQuiz(q:Quiz){
-    this.quiz.current=q;
+  startQuiz(q: Quiz) {
+    this.quiz.current = q;
     this.quiz.syscCurrent();
     this.quiz.initProgress();
-    this.router.navigate(['/',q.name,'question']);
+    this.router.navigate(['/', q.name, 'question']);
   }
 }

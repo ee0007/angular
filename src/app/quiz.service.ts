@@ -38,7 +38,7 @@ export class QuizService {
       return;
     }
     const list = JSON.parse(str);
-    this.list = list
+    this.list = list;
   }
 
   retrieveProgress() {
@@ -89,7 +89,7 @@ export class QuizService {
     this.progress = {
       questionId: 0,
       score: 0
-    }
+    };
     this.syscProhress();
   }
 

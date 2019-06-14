@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faSmile } from '@fortawesome/free-regular-svg-icons';
 import { QuizService } from 'src/app/quiz.service';
-import { runInThisContext } from 'vm';
 import { faPoo, faSmileWink } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -11,15 +10,15 @@ import { faPoo, faSmileWink } from '@fortawesome/free-solid-svg-icons';
 })
 export class ScoreComponent implements OnInit {
 
-  icon=faSmile;
-  constructor(public quiz:QuizService) { }
+  icon = faSmile;
+  constructor(public quiz: QuizService) { }
 
   ngOnInit() {
-    if(this.quiz.progress.score === 0){
-      this.icon=faPoo
+    if (this.quiz.progress.score === 0) {
+      this.icon = faPoo;
     }
-    if(this.quiz.progress.score === this.quiz.current.questions.length){
-      this.icon=faSmileWink;
+    if (this.quiz.progress.score === this.quiz.current.questions.length) {
+      this.icon = faSmileWink;
     }
   }
 

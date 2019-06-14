@@ -11,8 +11,8 @@ import { Quiz } from 'src/app/quiz';
 })
 export class CreateComponent implements OnInit {
 
-  f =new FormGroup({
-    name: new FormControl('titi',Validators.required),
+  f = new FormGroup({
+    name: new FormControl('titi', Validators.required),
   });
   constructor(
     private quiz: QuizService,
@@ -24,7 +24,7 @@ export class CreateComponent implements OnInit {
   submit() {
     console.log('submit');
     this.quiz.createCurrent(this.f.value.name);
-    this.router.navigateByUrl("/setup");
+    this.router.navigateByUrl('/setup');
   }
 
 }

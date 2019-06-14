@@ -14,25 +14,25 @@ import { Router } from '@angular/router';
 export class AddQuestionComponent implements OnInit {
 
   f = new FormGroup({
-    label:new FormControl('Quelle est la capital de la France',[Validators.required]),
-    answerA: new FormControl('Berlin',[Validators.required]),
-    answerB: new FormControl('Paris',[Validators.required]),
-    answerC: new FormControl('Rome',[Validators.required]),
-    answerD: new FormControl('Londres',[Validators.required]),
-    correctAnswer: new FormControl('',[Validators.required]),
+    label: new FormControl('Quelle est la capital de la France', [Validators.required]),
+    answerA: new FormControl('Berlin', [Validators.required]),
+    answerB: new FormControl('Paris', [Validators.required]),
+    answerC: new FormControl('Rome', [Validators.required]),
+    answerD: new FormControl('Londres', [Validators.required]),
+    correctAnswer: new FormControl('', [Validators.required]),
   });
 
-  constructor(private quiz:QuizService, private router:Router) {
-    
+  constructor(private quiz: QuizService, private router: Router) {
+
   }
 
   ngOnInit() {
 
   }
-  submit(){
+  submit() {
     this.quiz.addQuestion(this.f.value);
-    this.router.navigateByUrl("\setup");
+    this.router.navigateByUrl('\setup');
   }
-  
+
 
 }

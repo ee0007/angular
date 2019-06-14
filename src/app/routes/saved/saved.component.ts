@@ -8,7 +8,7 @@ import { faSmile } from '@fortawesome/free-regular-svg-icons';
 })
 export class SavedComponent implements OnInit {
 
-  faSmile=faSmile;
+  faSmile = faSmile;
   constructor() { }
 
   ngOnInit() {
