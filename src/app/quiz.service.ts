@@ -46,7 +46,7 @@ export class QuizService {
     if (!str) {
       return;
     }
-    
+
     this.progress = JSON.parse(str);
   }
 
@@ -87,13 +87,13 @@ export class QuizService {
 
   initProgress() {
     this.progress = {
-      questionId : 0,
-      score : 0
+      questionId: 0,
+      score: 0
     }
     this.syscProhress();
   }
 
-  syscProhress(){
+  syscProhress() {
     localStorage.setItem('progress', JSON.stringify(this.progress));
   }
 }
